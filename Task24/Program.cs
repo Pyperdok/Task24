@@ -26,12 +26,14 @@ namespace Task24
                     {
                         string text = reader.ReadToEnd();
                         string[] words = text.Split(' ');
+                        string rows = "";
                         foreach(string word in words) {
                             if(word.Length >= param.Number)
                             {
-                                Console.WriteLine(word);
+                                rows += word;
                             }
                         }
+                        Console.WriteLine(rows);
                     }
                 });
         }
